@@ -9,6 +9,7 @@ import { Single } from "./pages/single";
 import { ThankYou } from "./pages/thank-you-page";
 import { Contact } from "./pages/contact";
 import injectContext from "./store/appContext";
+import AboutUs from "./pages/aboutUs";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
