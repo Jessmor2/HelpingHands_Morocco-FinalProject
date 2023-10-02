@@ -5,10 +5,12 @@ db = SQLAlchemy()
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(80), unique=False, nullable=False)
-    first_name = db.Column(db.String(80), unique=False, nullable=False)
-    last_name = db.Column(db.String(80), unique=False, nullable=False)
-    
+    password = db.Column(db.String(80), nullable=False)
+    is_active = db.Column(db.Boolean, nullable=False)  # Ensure that this line is present
+    address = db.Column(db.String(500), nullable=False)
+    phone_number = db.Column(db.String(15), nullable=False)
+    full_name = db.Column(db.String(120), nullable=False)
+    donationinfo = db.relationship("Payments", backref="user", lazy=True)
 
     def __repr__(self):
         return f'<User {self.email}>'
@@ -20,7 +22,8 @@ class User(db.Model):
             "first_name": self.first_name,
             "last_name": self.last_name
         }
-    
+
+
 class Payments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.Integer, unique=False, nullable=False)
@@ -33,8 +36,6 @@ class Payments(db.Model):
     postal_code = db.Column(db.Integer, unique=False, nullable=False)
     phone_number = db.Column(db.Integer, unique=False, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    user = db.relationship(User)
-
 
     def serialize(self):
         return {
