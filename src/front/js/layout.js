@@ -5,8 +5,10 @@ import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
+import DonatePage from "./pages/donatepage";
 import { Single } from "./pages/single";
 import { ThankYou } from "./pages/thank-you-page";
+import { Cancel } from "./pages/cancel-page";
 import { Contact } from "./pages/contact";
 import { AboutUs } from "./pages/aboutUs";
 import injectContext from "./store/appContext";
@@ -33,8 +35,9 @@ const Layout = () => {
                     <Routes>
                         <Route element={<Home />} path="/home" />
                         <Route element={<Demo />} path="/demo" />
-                        <Route element={<AboutUs />} path="/aboutUs" />
-                        <Route element={<ThankYou />} path="/thank-you-page" />
+                        <Route element={<DonatePage />} path="/donatepage" />
+                        <Route element={<ThankYou />} path="/thankyou" />
+                        <Route element={<Cancel />} path="/cancel" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<Login />} path="/login" />
                         <Route element={<ForgotPassword />} path="/forgot-password" />

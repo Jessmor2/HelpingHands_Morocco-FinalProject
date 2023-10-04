@@ -23,8 +23,7 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 # database condiguration
-app.config['STRIPE_PUBLIC_KEY'] = 'pk_test_51NuMomEkSwAVwyolMfA93BOxdE4QefJlnUCz8nJZg00FQ7hFJ9VcZJAYXP3qxvJ94hMGlpnWBHkh6WcalEZLqP9R00QI2rQGQh'
-stripe.api_key = app.config['STRIPE_SECRET_KEY'] = 'sk_test_51NuMomEkSwAVwyolKawuX9hQ9U0Uzp2dMImjTiMZzs5Z6V2F2zersSp7B8EMATJIYfFicqn25M5n2qTeGSoUCWKZ00ywOxjq0F'
+
 db_url = os.getenv("https://miniature-robot-4x4r4xw9vj4fqvqj-3001.app.github.dev/")
 if db_url is not None:
     app.config['SQLALCHEMY_DATABASE_URI'] = db_url.replace("postgres://", "postgresql://")
