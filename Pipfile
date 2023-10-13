@@ -17,6 +17,8 @@ flask-cors = "*"
 gunicorn = "*"
 cloudinary = "*"
 flask-admin = "*"
+flask-jwt-extended = "*"
+flask-mail = "*"
 typing-extensions = "*"
 stripe = "*"
 
