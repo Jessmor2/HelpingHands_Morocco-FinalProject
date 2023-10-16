@@ -1,0 +1,325 @@
+.image-video {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.image1 {
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;
+  margin: 40px 80px;
+}
+
+.image2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  right: 180px;
+  bottom: 30px;
+}
+.image3 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  z-index: 2px;
+}
+
+.image2.zoomed {
+  width: 500px;
+  height: 500px;
+  transition: width 0.3s ease, height 0.3s ease; /* Add a smooth transition effect */
+  border-radius: 0%;
+  left: 500px;
+}
+
+.readMore {
+  margin-bottom: 10px;
+  background-color: purple;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+}
+.image-video-aboutUs {
+  margin-top: 50px;
+  margin-right: 20px;
+}
+.statement1,
+.statement2 {
+  text-align: justify;
+}
+
+@media (max-width: 1280px) {
+  .image1 {
+    width: 250px;
+    height: 250px;
+  }
+  .image2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 180px;
+    bottom: 180px;
+  }
+  .aboutUsHeader {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: purple;
+    font-family: monospace;
+    font-weight: bold;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1500px) {
+  .image1 {
+    width: 350px;
+    height: 350px;
+  }
+  .image2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 240px;
+    bottom: 130px;
+  }
+
+  .aboutUsHeader {
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: purple;
+    font-family: monospace;
+    font-weight: bold;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .image1 {
+    width: 300px;
+    height: 300px;
+  }
+  .image3 {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    top: -30px;
+  }
+  .image2 {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    position: absolute;
+    right: 280px;
+    bottom: 120px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .image1 {
+    width: 300px;
+    height: 300px;
+  }
+  .image3 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    top: -5px;
+  }
+  .image2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    right: 220px;
+    bottom: 120px;
+  }
+}
+@media (min-width: 576px) and (max-width: 663px) {
+  .image1 {
+    width: 350px;
+    height: 350px;
+  }
+  .image3 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    top: 5px;
+    z-index: 2px;
+  }
+  .image2 {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    right: 180px;
+    bottom: 100px;
+  }
+  .image2.zoomed {
+    display: none;
+  }
+}
+@media (min-width: 200px) and (max-width: 580px) {
+  .circularProgressBar {
+    margin-left: 150px;
+  }
+  .progress-bar1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .statement {
+    margin: 50px;
+    font-size: 10px;
+  }
+}
+
+.mission,
+.vision,
+.history {
+  text-align: justify !important;
+  color: purple;
+  font-family: monospace;
+  font-size: 40px;
+  margin-top: 10px;
+}
+.missionH5Tag,
+.visionH5Tag,
+.historyH5Tag {
+  text-align: justify !important;
+  color: gray;
+}
+.missionPTag,
+.visionPTag,
+.historyPTag {
+  font-size: smaller;
+}
+
+.avatar {
+  width: 250px;
+  height: 250px;
+}
+.volunteers {
+  text-align: center;
+  color: purple;
+}
+
+.aboutUsPTag {
+  color: rgb(182, 174, 174);
+  font: smaller;
+}
+.volunteersPTag {
+  color: rgb(182, 174, 174);
+  font-size: 12px;
+  text-align: center;
+}
+.bi-linkedin {
+  width: 22px;
+  height: 22px;
+  margin-left: -14px;
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensures the content takes up the full height of the parent div */
+}
+
+.bi-github {
+  width: 22px;
+  height: 22px;
+}
+.bi-instagram {
+  width: 22px;
+  height: 22px;
+  margin-left: 10px;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.card {
+  width: 250px;
+  margin: 10px;
+}
+.volunteers-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  background-color: purple;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+.volunteers-heading::before,
+.volunteers-heading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: purple;
+}
+
+.volunteers-heading::before {
+  left: -10px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transform: rotate(180deg);
+}
+
+.volunteers-heading::after {
+  right: -10px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  transform: rotate(0deg);
+}
+/* Define the hover effect for the image */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card1 {
+  position: relative;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: white;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin-top: 50px;
+  z-index: 10;
+}
+
+.card a {
+  z-index: 20;
+  position: relative;
+}
+
+.card1:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.card1:hover img {
+  opacity: 0.2;
+}
+
+.card1:hover .card-body,
+.card1:hover .card-footer {
+  background-color: transparent;
+}

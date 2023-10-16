@@ -1,0 +1,202 @@
+.progress-bar {
+  width: 100%;
+  height: 350px;
+  background-color: rgba(146, 110, 146, 0.44);
+  display: flex;
+  flex-direction: column !important;
+
+  align-items: center;
+}
+
+/* Media query for medium-sized screens */
+@media only screen and (max-width: 990px) {
+  .progress-bar {
+    height: auto;
+    padding: 10px;
+  }
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 768px) {
+  .progress-bar {
+    height: auto;
+    padding: 10px;
+  }
+  .raised-goal {
+    display: none;
+  }
+}
+
+.progress {
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  margin: 0 auto;
+  position: relative;
+}
+
+.progress:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress > span {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.progress .progress-left {
+  left: 0;
+}
+
+.progress .progress-bar {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-width: 12px;
+  border-style: solid;
+  position: absolute;
+  top: 0;
+}
+
+.progress .progress-left .progress-bar {
+  left: 100%;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-left: 0;
+  transform-origin: center left;
+}
+
+.progress .progress-right {
+  right: 0;
+}
+
+.progress .progress-right .progress-bar {
+  left: -100%;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+  border-right: 0;
+  transform-origin: center right;
+  animation: loading-1 1.8s linear forwards;
+}
+
+.progress .progress-value {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 24px;
+  color: #d10b4f;
+  line-height: 135px;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.progress.blue .progress-bar {
+  border-color: purple !important;
+}
+
+.progress.blue .progress-left .progress-bar {
+  width: 100%;
+  animation: loading-2 1.5s linear forwards 1.8s;
+}
+
+@keyframes loading-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes loading-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(144deg);
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .progress {
+    margin-bottom: 20px;
+  }
+}
+
+.body {
+  margin-left: 310px;
+}
+
+.raised-goal {
+  margin-left: -600px;
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+}
+.donate-button-statement {
+  background-color: purple;
+  color: white;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.donate-button-statement:hover {
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+}
+
+.progress-bar-statement {
+  text-align: justify;
+  margin-left: 60px;
+  color: black;
+}
+
+.circular-progress {
+  transform: rotate(-95deg);
+}
+
+.circular-progress-background {
+  fill: none;
+  stroke: #ddd; /* Color of the background circle */
+  stroke-width: 12; /* Adjust the stroke width as needed */
+}
+
+.circular-progress-bar {
+  fill: none;
+  stroke: purple; /* Color of the progress circle (change to your preferred color) */
+  stroke-width: 12; /* Adjust the stroke width as needed */
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.circular-progress-text {
+  font-size: 35px;
+  text-anchor: middle;
+  text-shadow: 5px 5px 8px rgba(46, 28, 47, 0.4);
+  color: #2e1c2f;
+  transform: rotate(-95) !important;
+}
+.circularProgressBar {
+  margin-top: 30px !important;
+}
+.donationMoney {
+  color: #fffdfb;
+}

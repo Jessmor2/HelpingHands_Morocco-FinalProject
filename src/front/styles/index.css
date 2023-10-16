@@ -1,3 +1,41 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+.btn-primary {
+    background-color: #800073 !important;
+    border-color: #800073 !important;
+}
+
+a {
+    color: black !important;
+  }
+  a:hover {
+    color: purple !important;
+  }
+
+footer {
+    background: #e9ecef;
+    bottom: -10px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+body {
+    overflow-x: hidden;
+}
+
+
+
+.cwuCQv {
+    box-shadow: none !important;
+    border-radius: unset !important;
+}
+
+.not-found-wrapper {
+    background: linear-gradient(0deg, #2e032e, #BFB2C2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 175px);
+    color: white;
+}

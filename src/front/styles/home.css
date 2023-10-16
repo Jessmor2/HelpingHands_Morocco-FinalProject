@@ -1,7 +1,355 @@
-/*
-    home.css: This website contains selectors only used in home.css
+.backgroundImage {
+  width: 100%;
+  height: 700px;
+  transition: left 0.5s ease-out, right 0.5s ease-out;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.text-overlay {
+  position: relative;
+  font-size: 15px;
+  padding: 20px;
+  margin-top: -40px;
+}
+
+@media (max-width: 1024px) {
+  .text-overlay {
+    font-size: 12px;
+    padding: 15px;
+  }
+  .donate-button {
+    width: 115px !important;
+    height: 40px !important;
+  }
+  .text-overlay h1 {
+    font-size: 40px !important;
+    margin-bottom: 150px;
+    margin-left: 35px !important;
+  }
+
+  .text-overlay p {
+    font-size: 18px !important;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 10px;
+    padding: 10px;
+  }
+
+  .donate-button {
+    width: 100px !important;
+    height: 30px !important;
+  }
+  .text-overlay h1 {
+    font-size: 25px !important;
+    margin: 120px;
+  }
+
+  .text-overlay p {
+    font-size: 15px !important;
+    margin: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-overlay {
+    font-size: 10px;
+    padding: 10px;
+  }
+  .donate-button {
+    width: 80px;
+    height: 30px;
+  }
+
+  .text-overlay h1 {
+    font-size: 10px !important;
+    margin: 25px;
+    margin-bottom: 50px !important;
+  }
+
+  .text-overlay p {
+    font-size: 10px !important;
+    margin-top: 15px;
+  }
+}
+
+.text-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.text-overlay:hover::before {
+  display: block;
+}
+
+.text-overlay h1 {
+  position: absolute;
+  font-family: monospace;
+  bottom: 280px;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+  padding: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.text-overlay p {
+  position: absolute;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  bottom: 150px;
+  left: 29%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+  padding: 5px;
+  font-size: 15px;
+  text-align: justify;
+}
+.donate-button {
+  position: absolute;
+  bottom: 100px;
+  left: 8%;
+  background-color: purple;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  width: 120px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 10px;
+}
+.donate-button:hover,
+.readMore:hover {
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+}
+
+#better {
+  color: purple;
+}
+
+.close-button {
+  position: absolute;
+  top: 50px;
+  right: 480px;
+  background-color: #ffffff;
+  color: purple;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.video-player {
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.aboutUsStatement {
+  margin-top: 30px;
+}
+.aboutUsHeader {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: purple;
+  font-family: monospace;
+  font-weight: bold;
+}
+.aboutUsPage {
+  padding: 10px;
+}
+.home-testimonial {
+  background-color: #231834;
+  height: 380px;
+}
+.home-testimonial-bottom {
+  transition: border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  position: relative;
+  height: 130px;
+  top: 190px;
+}
+.home-testimonial h3 {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: -25px;
+}
+.home-testimonial h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+.testimonial-inner {
+  position: relative;
+  top: -174px;
+}
+.testimonial-pos {
+  position: relative;
+  top: 24px;
+}
+.testimonial-inner .tour-desc {
+  border-radius: 5px;
+  padding: 40px;
+  margin-top: 75px;
+}
+.color-grey-3 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  color: #6c83a2;
+}
+.link-name {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  color: #6c83a2;
+}
+.link-position {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 12px;
+  color: #6c83a2;
+}
+.ratings i {
+  color: #cecece;
+  font-size: 20px;
+  margin-left: 75px;
+  margin-right: -71px;
+}
+
+.rating-color {
+  color: #fbc634 !important;
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+/*50% 
+  transform: translateX(0);  Stop at the middle (adjust as needed) 
+}*/
+.instruction {
+  position: relative;
+  animation: moveLeftToRight 10s linear infinite;
+  margin-top: 5px;
+  margin-left: 100px;
+  white-space: nowrap;
+  transform: translateX(0%);
+  transition: transform 0.1s ease-in-out;
+
+  /* Lightning-style styles */
+  color: #fff;
+  background-color: red;
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px purple;
+  border: 2px solid purple;
+  border-image: repeating-linear-gradient(
+    -15deg,
+    white,
+    white 5px,
+    transparent 10px,
+    transparent 10px
+  );
+  border-image-slice: 10;
+}
+.image3:hover,
+.image2:hover {
+  cursor: pointer;
+}
+
+.home-testimonial {
+  background-color: #231834;
+  height: 380px;
+}
+.home-testimonial-bottom {
+  transition: border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  position: relative;
+  height: 130px;
+  top: 190px;
+}
+.home-testimonial h3 {
+  color: white;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: -25px;
+}
+.home-testimonial h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+.testimonial-inner {
+  position: relative;
+  top: -174px;
+}
+.testimonial-pos {
+  position: relative;
+  top: 24px;
+}
+.testimonial-inner .tour-desc {
+  border-radius: 5px;
+  padding: 40px;
+  margin-top: 75px;
+}
+.color-grey-3 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  color: #6c83a2;
+}
+.link-name {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  color: #6c83a2;
+}
+.link-position {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 12px;
+  color: #6c83a2;
+}
+.ratings i {
+  color: #cecece;
+  font-size: 20px;
+  margin-left: 75px;
+  margin-right: -71px;
+}
+
+.rating-color {
+  color: #fbc634 !important;
+}

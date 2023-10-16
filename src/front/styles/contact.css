@@ -1,0 +1,19 @@
+.headerDiv {
+    background-color: #BFB2C2;
+    height: 120px;
+    margin-bottom: 10px; 
+}
+.aftermathPhoto1 {
+    height: 300px;
+    width: 400px;
+}
+.aftermathPhoto2 {
+    height: 300px;
+    width: 400px;
+}
+#contactFormSubmit {
+    background-color: purple;
+}
+.contactPageP {
+    width: 200px;
+}

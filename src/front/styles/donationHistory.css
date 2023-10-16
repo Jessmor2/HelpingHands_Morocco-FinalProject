@@ -1,0 +1,29 @@
+@media print {
+  /* Define print-specific styles here */
+  body {
+    background-color: white; /* Set a white background for printing */
+  }
+  /* Add styles to hide unnecessary elements, adjust font sizes, etc. */
+}
+.print {
+  width: 50px;
+  height: 30px;
+  float: right;
+  margin-top: 160px;
+}
+/* form {
+  float: right;
+  margin-top: 160px;
+} */
+.donationHistoryHeader {
+  text-align: center;
+}
+.bi-printer {
+  float: right;
+}
+.applyFilterBtn {
+  border-radius: 5px;
+}
+.dashboard {
+  margin-top: 50px;
+}

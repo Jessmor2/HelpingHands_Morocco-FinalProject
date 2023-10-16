@@ -1,0 +1,22 @@
+
+.footerLinks > * + * {
+  margin-left: 50px; /* Adjust the spacing between links and the line */
+  padding-left: 50px; /* Add space for the line */
+}
+
+.footerLinks > * + *::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px; /* Width of the vertical line */
+  background-color: rgb(213, 204, 204); /* Line color set to gray */
+  display: block;
+}
+
+.footerLinks > * {
+  text-decoration: none;
+  color: #aca4a4;
+  margin-right: 30px;
+}

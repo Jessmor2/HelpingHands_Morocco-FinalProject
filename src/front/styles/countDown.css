@@ -1,0 +1,23 @@
+.countDownHeading {
+  color: white;
+  font-family: cursive;
+  font-size: 25px;
+}
+.numberOfDays {
+  display: flex;
+}
+.timeRemaining {
+  text-shadow: -1px 3px 5px rgba(27, 24, 27, 0.5);
+  color: #1b181b;
+}
+.timeRemainingFooter {
+  background-color: #edb1f1;
+  color: white;
+}
+.countdown-timer {
+  background: linear-gradient(to bottom, #cca8e9 50%, rgb(234, 229, 237) 50%);
+  box-shadow: inset 2px -2px 14px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px 30px 30px;
+  margin-top: 20px;
+  border-radius: 5px;
+}

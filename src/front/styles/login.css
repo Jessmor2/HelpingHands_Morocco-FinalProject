@@ -1,0 +1,55 @@
+
+.login-wrapper {
+  position: relative;
+}
+.left-login-container {
+  width: 80%;
+  text-align: left;
+  margin: 0 auto;
+}
+.login-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  color: black;
+  right: 5%;
+}
+.login-container label {
+  padding-left: 0;
+  margin-left: 0;
+}
+.logo-image-wrapper {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input:invalid {
+  border: 2px solid red;
+}
+input:invalid:required {
+  background-color: lightpink
+}
+input:valid {
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 1000px) {
+  .login-text {
+    top: 10%
+  }
+  .login-text >div {
+    display: block !important;
+  }
+  .left-login-container {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .login-container {
+    width: 80%;
+    margin: auto;
+    right: auto;
+  }
+  
+}

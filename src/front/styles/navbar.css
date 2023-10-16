@@ -1,0 +1,151 @@
+.container {
+  margin-top: -75px;
+}
+
+.navbar {
+  height: 70px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks > * {
+  text-decoration: none;
+  color: #000;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Mobile menu styles */
+.navLinks.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center;
+  border: 1px solid #000;
+  border-top: none;
+}
+
+.navLinks.open > * {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+  }
+
+  .logo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .navLinks {
+    display: none !important;
+    align-items: center;
+  }
+
+  .navLinks.open {
+    display: flex !important;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    display: flex;
+    flex-direction: row;
+    font-size: x-small !important;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .navLinks > * + *::before {
+    display: none;
+  }
+}
+
+.button-link {
+  text-align: center;
+  display: inline-block;
+  padding: 3px 20px;
+  color: white !important;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 80px;
+  height: 30px;
+  transition: background-color 0.3s;
+  margin-right: 20px;
+}
+
+.login-button::before,
+.signup-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 100%;
+  width: 1px;
+  margin-left: -20px;
+  background-color: rgb(189, 186, 186);
+  display: block;
+}
+
+.login-button::before {
+  content: "";
+  right: 0;
+}
+
+.login-button {
+  background-color: purple;
+}
+
+.signup-button {
+  background-color: teal;
+  width: 90px;
+  height: 30px;
+  padding: 2px 12px;
+}
+.signup-button:hover {
+  background-color: purple;
+  color: white !important;
+  font-weight: bold;
+}
+.login-button:hover {
+  background-color: teal;
+  color: white !important;
+  font-weight: bold;
+}

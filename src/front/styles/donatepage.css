@@ -1,0 +1,24 @@
+/* .otherAmount{
+    margin-top:-20px;
+    
+    } */
+    
+    .activeAmountButton{
+        background-color: rgb(102, 28, 102);
+        color: white;
+    }
+
+.donationButton{
+    border:.5px solid lightgray;
+}
+
+.donatePageIcons{
+    width: 50px;
+    height:50px;
+    border-radius:30% ;
+    background-color: lightgray;
+    
+}
+.donatePagecontainer{
+    margin-top: 30px;
+}
